@@ -3,15 +3,15 @@
         "apps": [],
         "details": [
             {
-                "appID": "R7FQ553TEY.it.allianz.onetoone.dev",
+                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.dev.dev",
                 "paths": [ "*" ]
             },
             {
-                "appID": "R7FQ553TEY.it.allianz.onetoone.preprod",
+                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.dev.preprod",
                 "paths": [ "*" ]
             },
             {
-                "appID": "R7FQ553TEY.it.allianz.onetoone.tf",
+                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.dev.tf",
                 "paths": [ "*" ]
             },
             {
