@@ -7,6 +7,18 @@
                 "paths": [ "*" ]
             },
             {
+                "appID": "R7FQ553TEY.it.allianz.onetoone.preprod",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "R7FQ553TEY.it.allianz.onetoone.tf",
+                "paths": [ "*" ]
+            },
+            {
+                "appID": "R7FQ553TEY.it.allianz.onetoone",
+                "paths": [ "*" ]
+            },
+            {
                 "appID": "R7FQ553TEY.io.ionic.starter",
                 "paths": [ "*" ]
             }
