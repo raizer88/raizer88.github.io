@@ -4,23 +4,23 @@
         "details": [
             {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.dev",
-                "paths": [ "*" ]
+                "paths": [ "/prova/*" ]
             },
             {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.preprod",
-                "paths": [ "*" ]
+                "paths": [ "/prova/*" ]
             },
             {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.tf",
-                "paths": [ "*" ]
+                "paths": [ "/prova/*" ]
             },
             {
                 "appID": "R7FQ553TEY.it.allianz.onetoone",
-                "paths": [ "*" ]
+                "paths": [ "/prova/*" ]
             },
             {
                 "appID": "R7FQ553TEY.io.ionic.starter",
-                "paths": [ "*" ]
+                "paths": [ "/prova/*" ]
             }
         ]
     }
