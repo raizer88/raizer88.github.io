@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en"> 
+<head>
+<meta property="og:site_name" content="Allianz 1to1">
+<meta property="og:title" content="Prova custom redirect" />
+<meta property="og:description" content="Con questa pagina proviamo a fare un custom redirect per ovviare ai problemi di ios maledetto che non accetta l'iniezione di immagini e testo" />
+<meta property="og:image" itemprop="image" content="./test_image.jpg">
+<meta property="og:type" content="website" />
+<meta property="og:updated_time" content="1440432930" />
+<script type="text/javascript">
+    var seconds = 5;    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location = "https://www.sysdata.it";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+    countdown();
+    
+</script>
+</head>
+
+<h3>
+  Redirecting to 1to1 in <span id="countdown">5</span> seconds
+</h3>
+<body>
+
+</body>
+</html>
