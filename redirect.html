@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en"> 
+<head>
+<link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
+<meta property="og:site_name" content="Allianz 1to1">
+<meta property="og:title" content="Prova custom redirect" />
+<meta property="og:description" content="Con questa pagina proviamo a fare un custom redirect per ovviare ai problemi di ios maledetto che non accetta l'iniezione di immagini e testo" />
+<meta property="og:image" itemprop="image" content="./test_image.jpg">
+<meta property="og:type" content="website" />
+<meta property="og:updated_time" content="1440432930" />
+<style type="text/css">
+	h3 {
+  font-family: 'Niramit', sans-serif;
+  color: #808080	;
+}
+body {
+  background: #222;
+  color: #f0f0f0;
+}
+
+#messenger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 20px;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px rgba(#000, 0.9);
+}
+</style>
+<script type="text/javascript" src="https://zeptojs.com/zepto.min.js"></script>
+<script>
+var Messenger = function(el){
+  'use strict';
+  var m = this;
+  
+  m.init = function(){
+    m.codeletters = "&#*+%?£@§$";
+    m.message = 0;
+    m.current_length = 0;
+    m.fadeBuffer = false;
+    m.messages = ['Redirecting to 1to1 in <span id="countdown">5</span> seconds' ];
+    
+    setTimeout(m.animateIn, 100);
+  };
+  
+  m.generateRandomString = function(length){
+    var random_text = '';
+    while(random_text.length < length){
+      random_text += m.codeletters.charAt(Math.floor(Math.random()*m.codeletters.length));
+    } 
+    
+    return random_text;
+  };
+  
+  m.animateIn = function(){
+    if(m.current_length < m.messages[m.message].length){
+      m.current_length = m.current_length + 2;
+      if(m.current_length > m.messages[m.message].length) {
+        m.current_length = m.messages[m.message].length;
+      }
+      
+      var message = m.generateRandomString(m.current_length);
+      $(el).html(message);
+      
+      setTimeout(m.animateIn, 20);
+    } else { 
+      setTimeout(m.animateFadeBuffer, 20);
+    }
+  };
+  
+  m.animateFadeBuffer = function(){
+    if(m.fadeBuffer === false){
+      m.fadeBuffer = [];
+      for(var i = 0; i < m.messages[m.message].length; i++){
+        m.fadeBuffer.push({c: (Math.floor(Math.random()*12))+1, l: m.messages[m.message].charAt(i)});
+      }
+    }
+    
+    var do_cycles = false;
+    var message = ''; 
+    
+    for(var i = 0; i < m.fadeBuffer.length; i++){
+      var fader = m.fadeBuffer[i];
+      if(fader.c > 0){
+        do_cycles = true;
+        fader.c--;
+        message += m.codeletters.charAt(Math.floor(Math.random()*m.codeletters.length));
+      } else {
+        message += fader.l;
+      }
+    }
+    
+    $(el).html(message);
+    
+    if(do_cycles === true){
+      setTimeout(m.animateFadeBuffer, 50);
+    } else {
+    var seconds = 5; 
+    setTimeout(setInterval(function () {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location = "https://www.sysdata.it";
+        } else {
+            document.getElementById("countdown").innerHTML = seconds;     
+        }
+    },1000), 4000);
+    }
+  };
+  
+  m.cycleText = function(){
+    m.message = m.message + 1;
+    if(m.message >= m.messages.length){
+      m.message = 0;
+    }
+    
+    m.current_length = 0;
+    m.fadeBuffer = false;
+    $(el).html('');
+    
+    setTimeout(m.animateIn, 200);
+  };
+  
+  m.init();
+}
+
+console.clear();
+var messenger = new Messenger($('#messenger'));
+</script>
+</head>
+
+<h3>
+  Redirecting to 1to1 in <span id="countdown">5</span> seconds
+</h3>
+<body>
+
+</body>
+</html>
