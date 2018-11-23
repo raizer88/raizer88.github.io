@@ -3,7 +3,6 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
 <meta property="og:site_name" content="Allianz 1to1">
-<meta property="og:title" content="Prova custom redirect" />
 <meta property="og:description" content="Con questa pagina proviamo a fare un custom redirect per ovviare ai problemi di ios maledetto che non accetta l'iniezione di immagini e testo" />
 <meta property="og:image" content="https://raizer88.github.io/test_image.jpg">
 <meta property="og:image:type" content="image/jpg" />
@@ -33,7 +32,13 @@ body {
   text-shadow: 0 2px 2px rgba(#000, 0.9);
 }
 </style>
-<script type="text/javascript" src="https://raizer88.github.io/zepto.min.js"></script>
+
+<script type='text/javascript' data-cfasync='false'>
+  var link=document.createElement('meta');
+  link.name="og:title";
+  link.content="Test iniezione";
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
 <script>
 var Messenger = function(el){
   'use strict';
