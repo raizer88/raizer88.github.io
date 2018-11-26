@@ -7,7 +7,7 @@
                 "paths": [ "/prova/*" ]
             },
             {
-                "appID": "USU4S32268.it.sysdata.allianz.onetoone.preprod",
+                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.preprod",
                 "paths": [ "*", "/" ]
             },
             {
