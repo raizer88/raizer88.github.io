@@ -8,7 +8,7 @@
             },
             {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.preprod",
-                "paths": [ "/prova/*" ]
+                "paths": [ "*", "/prova/*" ]
             },
             {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.tf",
