@@ -22,6 +22,7 @@
                 "appID": "R7FQ553TEY.io.ionic.starter",
                 "paths": [ "/prova/*" ]
             }
+            
         ]
     }
 }
