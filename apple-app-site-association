@@ -3,10 +3,6 @@
         "apps": [],
         "details": [
             {
-                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.dev",
-                "paths": [ "/o2o/*", "/o2oshare" ]
-            },
-            {
                 "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.preprod",
                 "paths": ["/o2o/*", "/o2oshare" ]
             },
