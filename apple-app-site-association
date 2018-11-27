@@ -14,6 +14,10 @@
                 "appID": "R7FQ553TEY.it.allianz.onetoone",
                 "paths": [ "/o2o/*", "/o2oshare/*" ]
             },
+             {
+                "appID": "R7FQ553TEY.it.sysdata.allianz.onetoone.prod",
+                "paths": [ "/o2o/*", "/o2oshare/*" ]
+            },
             {
                 "appID": "MM889MYPSR.it.allianz.1to1",
                 "paths": ["/o2o/*", "/o2oshare/*"]
