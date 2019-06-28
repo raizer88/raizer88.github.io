@@ -3,7 +3,6 @@
  <head>
   <link href="https://fonts.googleapis.com/css?family=Niramit" rel="stylesheet">
   <title>1to1 redirect</title>
-  <meta name="apple-itunes-app" content="app-id=1439327763, app-argument=https://portaleagenzie.allianz.it/o2oshare/share?id=1131&uuid=xqjAJH9iGGQeyti6USRTtD">
   <meta name="description" content="descrizione notizia 2">
   <meta property="og:site_name" content="Allianz 1to1">
   <meta property="og:title" content="testtttt">
@@ -54,6 +53,32 @@ body {
         }
     },1000), 4000);
 </script>
+  
+<script type="text/javascript">
+r$(document).ready(function () {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera,
+     windowsLink = 'https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=768',
+   androidLink = 'intent://it.allianz.onetoone.preprod#Intent;scheme=launch;package=it.allianz.onetoone.preprod;S.browser_fallback_url=https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=768;end',
+     iosLink = 'it.allianz.onetoone.preprod://asd',
+     iosStore = 'https://itunes.apple.com/it/app/allianz-1to1/id1439327763?mt=8';
+
+        if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
+            if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) ||
+          /WPDesktop/i.test(userAgent)) {
+               window.location = windowsLink;
+            } else if(/android/i.test(userAgent)) {
+                window.location = androidLink;
+            }else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream){
+         window.location = iosLink;
+              setTimeout(function () {
+                    window.location = iosStore;
+                }, 25);
+           }
+      } else {
+                window.location = windowsLink;
+            }
+    });
+</script>  
  </head>
  <body>
   <link itemprop="thumbnailUrl" href="https://portaleagenzie.pp.azi.allianz.it/DATrxCont/o2o/WAthumb/test.jpg">
