@@ -65,11 +65,15 @@ $(document).ready(function () {
         if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
             if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) ||
           /WPDesktop/i.test(userAgent)) {
-               window.location = windowsLink;
+                              setTimeout(function () {
+                   window.location = windowsLink;
+                }, 5000);
             } else if(/android/i.test(userAgent)) {
-                window.location = androidLink;
+              setTimeout(function () {
+                     window.location = androidLink;
+                }, 5000);
             }else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream){
-         window.location = iosLink;
+              window.location = iosLink;
               setTimeout(function () {
                     window.location = iosStore;
                 }, 5000);
