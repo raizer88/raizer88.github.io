@@ -41,7 +41,7 @@ body {
     text-align: center;
 }
 
-</style>
+<!-- </style>
   <script>
     var seconds =5;
     setTimeout(setInterval(function () {
@@ -52,7 +52,7 @@ body {
             document.getElementById("countdown").innerHTML = seconds;
         }
     },1000), 4000);
-</script>
+</script> -->
   
 <script type="text/javascript">
 r$(document).ready(function () {
@@ -72,10 +72,13 @@ r$(document).ready(function () {
          window.location = iosLink;
               setTimeout(function () {
                     window.location = iosStore;
-                }, 25);
+                }, 5000);
            }
       } else {
-                window.location = windowsLink;
+        setTimeout(function () {
+                     window.location = windowsLink;
+                }, 5000);
+              
             }
     });
 </script>  
