@@ -44,51 +44,33 @@ body {
 </style> 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
  <script type="text/javascript">
-	
-$(document).ready(function () {
-   var seconds = 5;
-   var userAgent = navigator.userAgent || navigator.vendor || window.opera,
-     windowsLink = 'https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866',
-     androidLink = 'market://details?id=com.beeweeb.findomestic',
-     iosStore = 'https://apps.apple.com/it/app/id1484796226';
+$(document).ready(function() {
+var seconds = 5;
+var userAgent = navigator.userAgent || navigator.vendor || window.opera,
+    windowsLink = 'https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866',
+    androidLink = 'market://details?id=com.beeweeb.findomestic',
+    iosStore = 'https://apps.apple.com/it/app/id1484796226';
 
-        if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
-            if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) ||
-          /WPDesktop/i.test(userAgent)) {
-               window.location = windowsLink;
-            } else if(/android/i.test(userAgent)) {
-                window.location = androidLink;
-            }else if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream){
-         window.location = iosStore;
-           }
-      } else {
-         $(document).ready(function() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera,
-        windowsLink = 'https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866',
-        androidLink = 'market://details?id=com.beeweeb.findomestic',
-        iosStore = 'https://apps.apple.com/it/app/id1484796226';
-    if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
-        if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) || /WPDesktop/i.test(userAgent)) {
-            window.location = windowsLink;
-        } else if (/android/i.test(userAgent)) {
-            window.location = androidLink;
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location = iosStore;
-        }
-    } else {
-        setTimeout(setInterval(function() {
-            seconds = seconds - 1;
-            if (seconds < 0) {
-                window.location = "https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866";
-            } else {
-                document.getElementById("countdown").innerHTML = seconds;
-            }
-        }, 1000), 0);
-
+if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
+    if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) || /WPDesktop/i.test(userAgent)) {
+        window.location = windowsLink;
+    } else if (/android/i.test(userAgent)) {
+        window.location = androidLink;
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location = iosStore;
     }
+} else {
+    setTimeout(setInterval(function(windowsLink) {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location = windowsLink;
+        } else {
+            document.getElementById("countdown").innerHTML = seconds;
+        }
+    }, 1000), 0);
+
+}
 });
-            }
-    });
 </script> 
 
  </head> 
