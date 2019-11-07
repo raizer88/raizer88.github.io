@@ -58,8 +58,10 @@ if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows
     } else if (/android/i.test(userAgent)) {
         window.location = androidLink;
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-$( "#messenger" ).load(function() {
-      $('#messenger').html("<a href="+iosStore+"><img src=base64AppStore alt=\"AppStoreiOS\" class=\"center\"></a>");
+
+     
+$( document ).ready(function() {
+   $('#messenger').html("<a href="+iosStore+"><img src=base64AppStore alt=\"AppStoreiOS\" class=\"center\"></a>");
 });
    
         window.location = iosStore;
