@@ -50,19 +50,24 @@ var  windowsLink = 'https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=
 $(document).ready(function() {
 var seconds = 5;
 var userAgent = navigator.userAgent || navigator.vendor || window.opera,
-    androidLink = 'market://details?id=com.beeweeb.findomestic',
+    androidLink = 'it.allianz.onetoone://',
     iosLink = 'it.allianz.onetoone://';
 
 if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows phone/i.test(userAgent)) {
     if (/windows phone/i.test(userAgent) || /iemobile/i.test(userAgent) || /WPDesktop/i.test(userAgent)) {
         window.location = windowsLink;
     } else if (/android/i.test(userAgent)) {
+          setTimeout(function () {
+    if (new Date().valueOf() - now > 100) return;
+    window.location = "https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866";
+}, 25);
+
         window.location = androidLink;
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     
     $('#iOSDiv').css("visibility","visible");
     $('#messenger').css("visibility","hidden");
-        window.location = iosLink;
+   
      setTimeout(function () {
     if (new Date().valueOf() - now > 100) return;
     window.location = "https://consulentepp.allianzbank.it/o2o/redirect-pp.html?id=866";
