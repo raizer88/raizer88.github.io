@@ -83,13 +83,8 @@ body {
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- <script type="text/javascript">
-  function openApp() {
-window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
-}
-  </script>
- <script type="text/javascript">
 
+ <script type="text/javascript">
 
 var now = new Date().valueOf();
 var  windowsLink = 'https://consulente.allianzbank.it/o2o/redirect-pp.html?id=5469';
@@ -108,7 +103,6 @@ if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows
     if (new Date().valueOf() - now > 100) return;
     $("#modaleAndroid").modal();
 }, 25);
-       
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         setTimeout(function () {
     if (new Date().valueOf() - now > 100) return;
@@ -129,6 +123,11 @@ window.location = iosLink;
     }, 1000), 0);
 }
 });
+
+$('#openApp').on('click', function(event) {
+window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
+});
+
 </script> 
 
  </head> 
@@ -140,8 +139,8 @@ window.location = iosLink;
         Vuoi aprire questa pagina su "X-News"?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" onlick="openApp()">Annulla</button>
-        <button type="button" class="btn btn-primary" onlick="openApp()">Apri</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeApp">Annulla</button>
+        <button type="button" class="btn btn-primary" id="openApp">Apri</button>
       </div>
     </div>
   </div>
