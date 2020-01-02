@@ -100,7 +100,7 @@ if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows
         window.location = windowsLink;
     } else if (/android/i.test(userAgent)) {
           setTimeout(function () {
-    if (new Date().valueOf() - now > 100) return;
+  //  if (new Date().valueOf() - now > 100) return;
     $("#modaleAndroid").modal();
 }, 25);
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
