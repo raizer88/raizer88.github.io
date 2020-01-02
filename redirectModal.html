@@ -86,10 +86,10 @@ body {
 
  <script type="text/javascript">
 
+
+$(document).ready(function() {
 var now = new Date().valueOf();
 var  windowsLink = 'https://consulente.allianzbank.it/o2o/redirect-pp.html?id=5469';
-$(document).ready(function() {
-
 var seconds = 5;
 var userAgent = navigator.userAgent || navigator.vendor || window.opera,
     androidLink = 'it.allianz.onetoone://o2oshare?id=34',
@@ -100,7 +100,7 @@ if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) || /windows
         window.location = windowsLink;
     } else if (/android/i.test(userAgent)) {
           setTimeout(function () {
-  //  if (new Date().valueOf() - now > 100) return;
+    if (new Date().valueOf() - now > 100) return;
     $("#modaleAndroid").modal();
 }, 25);
     } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -123,11 +123,8 @@ window.location = iosLink;
     }, 1000), 0);
 }
 });
-</script> 
-<script type="text/javascript">
-$('#openApp').on('click', function(event) {
-window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
-});
+
+ 
 
 </script> 
 
@@ -157,5 +154,14 @@ window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?i
     <h3> Sarai indirizzato alla news in <span id="countdown">5</span> secondi </h3> 
    </div> 
   </div>
+   <script type="text/javascript">
+  $(document).ready(function() {
+  $('#openApp').on('click', function(event) {
+window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
+});
+  });
+
+
+</script> 
  </body>
 </html>
