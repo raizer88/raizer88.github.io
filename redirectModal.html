@@ -52,7 +52,10 @@ body {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   color: #F2F2F2;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans'; 
+  max-height: calc(100vh - 143px);
+  overflow-y: auto; 
+  font-size: xx-large;
 }
 .modal-footer {
     border-top: 0 none;
@@ -64,20 +67,30 @@ body {
     -webkit-border-radius: 50px !important;
     -moz-border-radius: 50px !important;
     border-radius: 500px !important; 
-    
+    height: 10%;
+
 }
+
+.modal-dialog{
+max-width:  calc(100% - 3.5rem);
+height: 10%;
+}
+
+
 .btn-primary {
   color: #518AF5 !important;
   font-weight: bold !important;
   background-color: #1C1C1E;
    border: 0;
    font-family: 'PT Sans';
+     font-size: xx-large;
 }
 .btn-secondary {
   color: #518AF5 !important;
   background-color: #1C1C1E;
   border: 0;
   font-family: 'PT Sans';
+    font-size: xx-large;
 }
 </style> 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -124,7 +137,9 @@ window.location = iosLink;
 }
 });
 
- 
+$('#openApp').on('click', function(event) {
+window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
+});
 
 </script> 
 
@@ -154,14 +169,5 @@ window.location = iosLink;
     <h3> Sarai indirizzato alla news in <span id="countdown">5</span> secondi </h3> 
    </div> 
   </div>
-   <script type="text/javascript">
-  $(document).ready(function() {
-  $('#openApp').on('click', function(event) {
-window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";
-});
-  });
-
-
-</script> 
  </body>
 </html>
