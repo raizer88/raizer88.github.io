@@ -167,11 +167,11 @@
   <script type="text/javascript">
     $('#openApp').on('click', function(event) {
       // window.location = "it.allianz.onetoone://o2oshare?id=34";
-       try {
-          window.location = "it.allianz.onetoone://o2oshare?id=34";
-        } catch (error) {
-          window.location="market://details?id=it.allianz.onetoone";
-        }
+   
+       window.location = "it.allianz.onetoone://o2oshare?id=34";
+          setTimeout(function () {
+           window.location="https://portaleagenzie.pp.azi.allianz.it/o2o/redirect-pp.html?id=911";            
+          }, 50);
     });
     $('#appStoreOpen').on('click', function(event) {
       window.location="market://details?id=it.allianz.onetoone";
